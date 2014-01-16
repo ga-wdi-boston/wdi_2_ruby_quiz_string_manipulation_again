@@ -12,20 +12,28 @@
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
 def sleep_in?
+	Time.now.wday == 0 || Time.now.wday == 6
 end
+
 
 # Question 2: a method called del_del
 #############
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
-
+def del_del(string)
+	string.slice!('del')
+end
 # Question 3: a method called missing_char
 #############
 # Remove the character that corresponds to the index from the string.
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+def missing_char(string, index)
+	
+	string.slice!(string[index])
+end
 
 # Question 4: a method called near_hundred?
 #############
@@ -36,8 +44,20 @@ end
 # near_hundred?(52) => false
 # near_hundred?('two') => RuntimeError: Please enter a number!
 
+def near_hundred(int)
+	if int <= 99 && int >=90
+		true
+	elsif false
+	end
+end
+
 # Question 5: a method called back_around
 #############
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+
+def back_around(string)
+	cut = string.slice!(string[string.length])
+	string[string.length] + cut
+end
