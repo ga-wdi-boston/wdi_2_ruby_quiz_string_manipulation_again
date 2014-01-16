@@ -11,7 +11,8 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options = {})
+  options[:vacation] || !(1..5).include?(Time.now.wday)
 end
 
 # Question 2: a method called del_del
@@ -20,12 +21,28 @@ end
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
 
+def del_del(string)
+  string.gsub('del', '')
+end
+
+
 # Question 3: a method called missing_char
 #############
 # Remove the character that corresponds to the index from the string.
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+begin
+def missing_char(word, index)
+  word[index] = ''
+  word
+end
+
+rescue NoMethodError
+  puts 'Please enter a string!'
+end
+
+
 
 # Question 4: a method called near_hundred?
 #############

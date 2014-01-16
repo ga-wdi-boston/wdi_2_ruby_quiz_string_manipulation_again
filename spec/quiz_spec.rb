@@ -33,12 +33,31 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+  describe '#del_del' do
+    it 'returns a string without del inside of it' do
+      expect(del_del('abdelcd')).to eq 'abcd'
+    end
+    it 'returns the same string when del is not found' do
+      expect(del_del('xyz')).to eq 'xyz'
+    end
+  end
 
 # Question 3: a method called missing_char
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
+
+  describe '#missing_char' do
+    it 'removes the character at the specified index' do
+      expect(missing_char('kitten', 1)).to eq 'ktten'
+      expect(missing_char('cat', 1)).to eq 'ct'
+    end
+
+    it 'returns a RuntimeError when no string is entered' do
+      expect(missing_char(347, 1)).to eq 'RuntimeError: Please enter a string!'
+    end
+  end
 
 # Question 4: a method called near_hundred
   # Example Usage:
