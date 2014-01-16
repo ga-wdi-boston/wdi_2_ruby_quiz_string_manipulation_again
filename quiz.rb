@@ -61,5 +61,7 @@ end
 # "hello".back_around => "ohell"
 
 def back_around(string)
+  last_character = string[-1]
   new_string = string.delete(string[-1])
+  last_character + new_string
 end
