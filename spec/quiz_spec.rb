@@ -26,8 +26,38 @@ describe "#sleep_in?" do
   end
 end
 
+describe '#del_del' do
+  it 'return no del words' do
+    expect(del_del('abdelcd')).to eq 'abcd'
+  end
+  it 'return no del words sec' do
+    expect(del_del('xyz')).to eq 'xyz'
+  end
+end
+
+describe '#missing_char' do
+  it 'return char without the missing one' do
+    expect(missing_char("kitten", 1)).to eq "ktten"
+    expect(missing_char(347, 1)).to eq raise "Please enter a string!"
+  end
+end
+
 # Write the next tests yourself!
 # See quiz.rb for more details
+describe '#near_hundred?' do
+  it 'return true if near hundred' do
+    expect(near_hundred?(98)).to eq true
+    expect(near_hundred?(89)).to eq false
+    expect(near_hundred?('str')).to eq 'RuntimeError: Please enter a number'
+  end
+end
+
+describe '#back_around' do
+  it 'return the true value of str' do
+    expect(back_around('hello')).to eq 'ohello'
+    expect(back_around('tca')).to eq 'atc'
+  end
+end
 
 # Question 2: a method called del_del
   # Example Usage:
