@@ -20,19 +20,24 @@ describe "#sleep_in?" do
     expect(parameters).to include(:options)
   end
 
-  it "returns true if vacation is true" do
-    question_1 = sleep_in?(vacation: true)
-    expect(question_1).to be(true)
+#   it "returns true if vacation is true" do
+#     question_1 = sleep_in?(vacation: true)
+#     expect(question_1).to be(true)
+#   end
+end
+
+
+describe "#del_del" do
+  it "removes 'del' from string" do
+    # assuming you're answering this on a weekday!
+    expect(del_del("abdelcd")).to eq("abcd")
+  end
+
+  it "returns original string if 'del' is not present" do
+    expect(del_del("xyz")).to eq ('xyz')
   end
 end
 
-# Write the next tests yourself!
-# See quiz.rb for more details
-
-# Question 2: a method called del_del
-  # Example Usage:
-  # del_del("abdelcd") => "abcd"
-  # del_del("xyz") => "xyz"
 
 # Question 3: a method called missing_char
   # Example Usage:
@@ -40,13 +45,23 @@ end
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
 
-# Question 4: a method called near_hundred
-  # Example Usage:
-  # near_hundred(93) => true
-  # near_hundred(52) => false
-  # near_hundred('two') => RuntimeError: Please enter a number!
+describe "#near_hundred?" do
+  it "returns true if x is between 90 and 99" do
+    # assuming you're answering this on a weekday!
+    expect(near_hundred?(95)).to eq true
+  end
 
-# Question 5: a method called back_around
-  # Example Usage:
-  # "cat".back_around => "tca"
-  # "hello".back_around => "ohell"
+  it "returns true if x is less than or equal to 89" do
+     expect(near_hundred?(2)).to eq false
+  end
+end
+
+
+describe "#back_around" do
+  it "puts the last character of the string to the beginning" do
+    # assuming you're answering this on a weekday!
+    expect(back_around('cat')).to eq 'tca'
+    expect(back_around('hello')).to eq 'ohell'
+  end
+end
+
