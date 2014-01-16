@@ -12,7 +12,7 @@
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
 def sleep_in?(options={})
-	if Date.now == 1 | 2 | 3 | 4 | 5 #i don't remember the or operator.
+	if Time.now.wday == 1 | 2 | 3 | 4 | 5 #i don't remember the or operator.
 		then false
 	else
 		true
@@ -35,6 +35,13 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 
+def missing_char(string, index)
+	string[index].delete(string)
+	if string = false
+		raise "RuntimeError: Please enter a string!"
+	end
+end
+
 # Question 4: a method called near_hundred?
 #############
 # Write a method called near_hundred?
@@ -43,6 +50,12 @@ end
 # near_hundred? => true
 # near_hundred?(52) => false
 # near_hundred?('two') => RuntimeError: Please enter a number!
+
+def near_hundred(input)
+	if input <= 99 && input >= 90
+		then true
+	else false
+end
 
 # Question 5: a method called back_around
 #############
