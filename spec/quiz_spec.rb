@@ -34,11 +34,28 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+describe "#del_del" do
+  it "removes the string del from any string" do
+
+    expect(del_del("abdelcd")).to eq("abcd")
+  end
+end
+
+
 # Question 3: a method called missing_char
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
+
+describe "#missing_char" do
+  it "removes the character corresponding to the parameter you give it" do
+
+    expect(missing_char("kitten", 1)). to eq("ktten")
+  end
+end
+
+
 
 # Question 4: a method called near_hundred
   # Example Usage:
@@ -50,3 +67,18 @@ end
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
