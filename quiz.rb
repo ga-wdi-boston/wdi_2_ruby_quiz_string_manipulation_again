@@ -12,9 +12,9 @@
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
 def sleep_in?(options = {})
- if Time.now.wd == 0 || Time.now.weekday == 6
+ if Time.now.wday == 0 || Time.now.wday == 6
  	return true
- elsif options[:vaction] == true
+ elsif options[:vacation] = true
  	return true
  else
  	 return false
@@ -27,6 +27,8 @@ end
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
 def del_del(string)
+	x = string.delete("del")
+	return x
 end
 
 
@@ -37,7 +39,8 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 
-def missing_char(string)
+def missing_char(string, value)
+	string.delete()
 end
 
 # Question 4: a method called near_hundred?
@@ -50,6 +53,11 @@ end
 # near_hundred?('two') => RuntimeError: Please enter a number!
 
 def near_hundred(num)
+	if num > 89 && num < 110
+		return true
+	else
+		return false
+	end
 end
 
 # Question 5: a method called back_around
@@ -57,6 +65,9 @@ end
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+class String
 
-def back_around(string)
+	def back_around(string)
+	end
+
 end
