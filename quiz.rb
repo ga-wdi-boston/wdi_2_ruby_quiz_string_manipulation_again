@@ -19,6 +19,8 @@ end
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
+def del_del
+end
 
 # Question 3: a method called missing_char
 #############
@@ -26,6 +28,8 @@ end
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+def missing_char
+end
 
 # Question 4: a method called near_hundred?
 #############
@@ -35,9 +39,13 @@ end
 # near_hundred? => true
 # near_hundred?(52) => false
 # near_hundred?('two') => RuntimeError: Please enter a number!
+def near_hundred
+end
 
 # Question 5: a method called back_around
 #############
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+def back_around
+end
