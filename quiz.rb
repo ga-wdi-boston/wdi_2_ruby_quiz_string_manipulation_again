@@ -11,14 +11,28 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options = {})
+  false
 end
 
-# Question 2: a method called del_del
-#############
-# Remove "del" from a string.
-# del_del("abdelcd") => "abcd"
-# del_del("xyz") => "xyz"
+def del_del(string)
+  new_string = string.gsub(/del/, '')
+end
+
+# def missing_char(string, index)
+#   new_string = string.
+# end
+
+
+def near_hundred?(x)
+  if x > 90
+    true
+  elsif x < 89
+    false
+  else
+    return "RuntimeError: Please enter a number!"
+  end
+end
 
 # Question 3: a method called missing_char
 #############
@@ -27,14 +41,9 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 
-# Question 4: a method called near_hundred?
-#############
-# Write a method called near_hundred?
-# If the number is between 90 and 99, the result is true;
-# If it is 89 or below, it is false.
-# near_hundred? => true
-# near_hundred?(52) => false
-# near_hundred?('two') => RuntimeError: Please enter a number!
+def back_around(string)
+  new_string = string.split.pop.unshift
+end
 
 # Question 5: a method called back_around
 #############
