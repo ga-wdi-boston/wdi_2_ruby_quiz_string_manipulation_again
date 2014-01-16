@@ -34,11 +34,24 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+describe '#del_del' do
+  it "has a method called del_del that removes del from a string" do
+    expect (del_del(string)).to be "abcd"
+  end
+
+  it "does not delete anything from a string that doesn't include del" do
+    expect (del_del(string)).to be "xyz"
+  end
+end
+
 # Question 3: a method called missing_char
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
+
+describe '#missing_char'
+end
 
 # Question 4: a method called near_hundred
   # Example Usage:

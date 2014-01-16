@@ -11,7 +11,11 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options={})
+	if Date.now == 1 | 2 | 3 | 4 | 5 #i don't remember the or operator.
+		then false
+	else
+		true
 end
 
 # Question 2: a method called del_del
@@ -19,6 +23,10 @@ end
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
+
+def del_del(string)
+	string.delete(del)
+end
 
 # Question 3: a method called missing_char
 #############
