@@ -48,6 +48,13 @@ end
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
 
+  describe '#missing_char' do
+    it 'removes the character at the specified index' do
+      expect(missing_char('kitten', 1)).to eq 'ktten'
+      expect(missing_char('cat', 1)).to eq 'ct'
+    end
+  end
+
 # Question 4: a method called near_hundred
   # Example Usage:
   # near_hundred(93) => true
