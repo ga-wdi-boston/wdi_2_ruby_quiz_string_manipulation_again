@@ -11,8 +11,23 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
+# 	def sleep_in?
+# 		weekend = "Saturday" || "Sunday"
+# 		if weekend == "Saturday"
+# 			puts "false"
+# 		else weekend == "Sunday"
+# 			puts "false"
+# 		end
+# end
+# sleep_in?("Sunday")
+
 def sleep_in?
+	Time.now.wday == 0 || 6
 end
+
+sleep_in?
+
+
 
 # Question 2: a method called del_del
 #############
