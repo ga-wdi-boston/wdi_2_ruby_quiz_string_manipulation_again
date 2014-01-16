@@ -39,7 +39,11 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 
+def missing_char(string, index)
+	new = string.slice!
 
+
+end
 
 
 # Question 4: a method called near_hundred?
