@@ -32,10 +32,17 @@ end
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+begin
 def missing_char(word, index)
   word[index] = ''
   word
 end
+
+rescue NoMethodError
+  puts 'Please enter a string!'
+end
+
+
 
 # Question 4: a method called near_hundred?
 #############

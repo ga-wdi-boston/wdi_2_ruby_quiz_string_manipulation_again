@@ -53,6 +53,10 @@ end
       expect(missing_char('kitten', 1)).to eq 'ktten'
       expect(missing_char('cat', 1)).to eq 'ct'
     end
+
+    it 'returns a RuntimeError when no string is entered' do
+      expect(missing_char(347, 1)).to eq 'RuntimeError: Please enter a string!'
+    end
   end
 
 # Question 4: a method called near_hundred
