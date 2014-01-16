@@ -37,6 +37,9 @@ end
     it 'returns a string without del inside of it' do
       expect(del_del('abdelcd')).to eq 'abcd'
     end
+    it 'returns the same string when del is not found' do
+      expect(del_del('xyz')).to eq 'xyz'
+    end
   end
 
 # Question 3: a method called missing_char
