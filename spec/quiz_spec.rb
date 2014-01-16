@@ -33,20 +33,46 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+  describe "#del_del" do
+    it 'should remove del from a string' do
+      expect(del_del("abdelcd")).to eq "abcd"
+    end
+    it 'should return the string if del is not present' do
+      expect(del_del("xyz")).to eq "xyz"
+    end
+  end
 
 # Question 3: a method called missing_char
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
+  describe "#missing_char" do
+    it 'should remove the character at a specified index' do
+      expect(missing_char("kitten", 1)).to eq "ktten"
+    end
+    it 'should raise a RuntimeError if a number is submitted instead of a string' do
+      expect(missing_char(347, 1)).to eq "RuntimeError: Please enter a string!"
+    end
+  end
 
 # Question 4: a method called near_hundred
   # Example Usage:
   # near_hundred(93) => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+  describe "#near_hundred" do
+    it 'should return true if the number is between 90 and 99' do
+      expect(near_hundred(93)).to be true
+    end
+  end
 
 # Question 5: a method called back_around
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+  describe "#back_around" do
+    it 'take the last character of an array and brings it to the front' do
+      expect("cat".back_around).to eq "tca"
+    end
+  end
