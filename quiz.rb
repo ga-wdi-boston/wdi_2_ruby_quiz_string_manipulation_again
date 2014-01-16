@@ -11,7 +11,8 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options={})
+  options[:vacaction] || !(1..5).include?(Time.now.wday)
 end
 
 # Question 2: a method called del_del
