@@ -31,6 +31,7 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 def missing_char(string, index)
+	
 	string.slice!(string[index])
 end
 
@@ -43,8 +44,20 @@ end
 # near_hundred?(52) => false
 # near_hundred?('two') => RuntimeError: Please enter a number!
 
+def near_hundred(int)
+	if int <= 99 && int >=90
+		true
+	elsif false
+	end
+end
+
 # Question 5: a method called back_around
 #############
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+
+def back_around(string)
+	cut = string.slice!(string[string.length])
+	string[string.length] + cut
+end
