@@ -54,7 +54,8 @@ end
 
 describe '#back_around' do
   it 'return the true value of str' do
-    expect(back_around('hello')).to eq 
+    expect(back_around('hello')).to eq 'ohello'
+    expect(back_around('tca')).to eq 'atc'
   end
 end
 
