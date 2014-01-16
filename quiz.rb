@@ -12,7 +12,7 @@
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
 def sleep_in?(options = {})
-	if Time.now.wday == 0 | Time.now.wday == 6
+	if Time.now.wday == 0 || Time.now.wday == 6
 		true
 	elsif options[:vacation] == true
 		true
