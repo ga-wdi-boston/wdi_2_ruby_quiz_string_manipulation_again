@@ -21,6 +21,11 @@ end
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
 
+def del_del(string)
+  string.gsub('del', '')
+end
+
+
 # Question 3: a method called missing_char
 #############
 # Remove the character that corresponds to the index from the string.
